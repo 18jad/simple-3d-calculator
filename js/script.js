@@ -93,7 +93,11 @@ buttons.forEach((button) => {
         }
         break;
       default:
-        setDisplayValue(value + e.target.innerText);
+        if (value == "0") {
+          setDisplayValue(e.target.innerText);
+        } else {
+          setDisplayValue(value + e.target.innerText);
+        }
     }
   });
 });
