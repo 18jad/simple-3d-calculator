@@ -18,6 +18,11 @@ body {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 700px) {
+  body {
+    background: #d1d6d2;
+  }
+}
 
 main {
   position: absolute;
@@ -29,6 +34,11 @@ main h1 {
   font-family: poppins;
   text-align: center;
   color: #352727;
+}
+@media screen and (max-width: 700px) {
+  main h1 {
+    font-size: 18px;
+  }
 }
 
 .calculator {
@@ -44,6 +54,15 @@ main h1 {
   transform: rotateX(10deg);
   border: 10px double rgba(103, 88, 95, 0.8);
   box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.2666666667), inset 0 9px 7px -3px rgba(255, 255, 255, 0.0666666667);
+  transition: all 0.25s ease-in-out;
+}
+@media screen and (max-width: 700px) {
+  .calculator {
+    transform: scale(0.7);
+    overflow: hidden;
+    width: 400px;
+    aspect-ratio: 4/7;
+  }
 }
 .calculator .calculator-display {
   background: #746f71;
@@ -58,6 +77,11 @@ main h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0666666667), inset 0 9px 7px 3px rgba(0, 0, 0, 0.1333333333), inset 0 -7px 7px 3px rgba(0, 0, 0, 0.1333333333), inset 0 -25px 15px 9px rgba(255, 255, 255, 0.0666666667), inset 0 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   cursor: text;
+}
+@media screen and (max-width: 500px) {
+  .calculator .calculator-display {
+    height: 110px;
+  }
 }
 .calculator .calculator-display::after {
   content: "0.0.0.0.0.0.0.0.0";
@@ -83,6 +107,11 @@ main h1 {
   padding: 0 5px;
   letter-spacing: 2px;
   border: 3px solid rgba(56, 42, 39, 0.5058823529);
+}
+@media screen and (max-width: 500px) {
+  .calculator .calculator-display .number-input {
+    font-size: 65px;
+  }
 }
 .calculator .calculator-keypad {
   display: grid;
@@ -143,11 +172,40 @@ main h1 {
   color: white;
   background-color: #e27c20;
   box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2666666667), inset 0 9px 9px -3px rgba(0, 0, 0, 0.2), inset 0 -7px 7px 3px rgba(140, 70, 0, 0.8235294118), inset 0 -25px 15px -9px rgba(255, 255, 255, 0.0666666667), inset 0 0 1px 4px rgba(255, 255, 255, 0.2);
+  font-size: 40px;
+}
+.calculator .calculator-keypad .calculator-keypad-button.orange-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  bottom: 14px;
+  right: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(45, 45, 45, 0.2666666667), rgba(77, 77, 77, 0.2156862745));
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(49, 41, 23, 0.267);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2666666667);
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
 }
 .calculator .calculator-keypad .calculator-keypad-button.white-btn {
   color: #5e4d53;
   background-color: #d1d6d2;
   box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.2666666667), inset 0 9px 7px -3px rgba(255, 255, 255, 0.3333333333), inset 0 -7px 7px 3px rgba(0, 0, 0, 0.5333333333), inset 0 -25px 15px -9px rgba(255, 255, 255, 0.0666666667), inset 0 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.calculator .calculator-keypad .calculator-keypad-button.white-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  bottom: 14px;
+  right: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(45, 45, 45, 0.2666666667), rgba(77, 77, 77, 0.2156862745));
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.2666666667);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2666666667);
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .error {

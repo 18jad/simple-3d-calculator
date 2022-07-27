@@ -29,6 +29,9 @@ body {
   max-height: 100vh;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: 700px) {
+    background: #d1d6d2;
+  }
 }
 
 main {
@@ -41,6 +44,10 @@ main {
     font-family: poppins;
     text-align: center;
     color: #352727;
+
+    @media screen and (max-width: 700px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -57,6 +64,14 @@ main {
   transform: rotateX(10deg);
   border: 10px double #67585fcc;
   box-shadow: 0 4px 20px 4px #0004, inset 0 9px 7px -3px #fff1;
+  transition: all 0.25s ease-in-out;
+  @media screen and (max-width: 700px) {
+    transform: scale(0.7);
+    overflow: hidden;
+    width: 400px;
+    aspect-ratio: 4/7;
+    // width: 400px;
+  }
 
   .calculator-display {
     background: #746f71;
@@ -73,6 +88,9 @@ main {
       inset 0 0 2px 5px #0003;
     position: relative;
     cursor: text;
+    @media screen and (max-width: 500px) {
+      height: 110px;
+    }
 
     &::after {
       content: "0.0.0.0.0.0.0.0.0";
@@ -99,6 +117,9 @@ main {
       padding: 0 5px;
       letter-spacing: 2px;
       border: 3px solid #382a2781;
+      @media screen and (max-width: 500px) {
+        font-size: 65px;
+      }
     }
   }
 
@@ -172,6 +193,22 @@ main {
         box-shadow: 0 4px 6px 2px #0004, inset 0 9px 9px -3px #0003,
           inset 0 -7px 7px 3px #8c4600d2, inset 0 -25px 15px -9px #fff1,
           inset 0 0 1px 4px #fff3;
+        font-size: 40px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 8px;
+          bottom: 14px;
+          right: 12px;
+          border-radius: 10px;
+          background: linear-gradient(90deg, #2d2d2d44, #4d4d4d37);
+          box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+            10px 5px 10px rgba(0, 0, 0, 0.15);
+          border-left: 1px solid rgba(49, 41, 23, 0.267);
+          border-bottom: 1px solid #0004;
+          border-top: 1px solid #0009;
+        }
       }
 
       &.white-btn {
@@ -180,6 +217,21 @@ main {
         box-shadow: 0 4px 6px 2px #0004, inset 0 9px 7px -3px #fff5,
           inset 0 -7px 7px 3px #0008, inset 0 -25px 15px -9px #fff1,
           inset 0 0 1px 4px #0003;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 8px;
+          bottom: 14px;
+          right: 12px;
+          border-radius: 10px;
+          background: linear-gradient(90deg, #2d2d2d44, #4d4d4d37);
+          box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+            10px 5px 10px rgba(0, 0, 0, 0.15);
+          border-left: 1px solid #0004;
+          border-bottom: 1px solid #0004;
+          border-top: 1px solid #0009;
+        }
       }
     }
   }
